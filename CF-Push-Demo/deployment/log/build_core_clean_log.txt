@@ -1,0 +1,10 @@
+﻿Buildfile: C:\Users\dlavo\projects\bdc\git\bdc-experiment\CF-Push-Demo\deployment\build_core.xml
+
+clean:
+   [delete] Deleting directory C:\Users\dlavo\projects\bdc\git\bdc-experiment\CF-Push-Demo\deployment\model
+   [delete] Deleting directory C:\Users\dlavo\projects\bdc\git\bdc-experiment\CF-Push-Demo\deployment\run
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

@@ -1,0 +1,13 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: springcloudservices/spring-cloud-base
+
+inputs:
+- name: src
+
+run:
+  path: src/ci/tasks/blue-green-deploy/blue-green-deploy.sh

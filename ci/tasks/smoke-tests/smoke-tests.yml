@@ -1,0 +1,13 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: byrnedo/alpine-curl
+
+inputs:
+- name: src
+
+run:
+  path: src/ci/tasks/smoke-tests/smoke-tests.sh

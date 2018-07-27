@@ -1,0 +1,9 @@
+[rtlauncher:container$] INFO Evictions for component 'project-userlib':
+Evicted C:\Users\Daniel\projects\platform-architect\git\Simple_HRM\deployment\model\lib\userlib\openid4java-0.9.8.jar by C:\Users\Daniel\projects\platform-architect\git\Simple_HRM\deployment\model\lib\userlib\openid4java-1.0.0.jar.
+[rtlauncher:container$] INFO Container start took 2234. Ready to accept admin requests.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+
+

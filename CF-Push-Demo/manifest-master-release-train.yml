@@ -1,0 +1,7 @@
+---
+applications:
+- name: mendix-demo-app
+  instances: 2
+  buildpack: https://github.com/mendix/cf-mendix-buildpack.git#v1.9.2
+  services:
+  - mendix-demo-db

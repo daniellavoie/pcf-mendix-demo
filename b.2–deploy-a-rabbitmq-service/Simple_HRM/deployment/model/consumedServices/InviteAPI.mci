@@ -1,0 +1,53 @@
+﻿{
+  "Name": "InviteAPI",
+  "Documentation": "",
+  "Version": 1,
+  "PublishDateTime": "Thu, 05 Jun 2014 15:44:33 GMT",
+  "ServiceGuid": "b87bf96b-0636-4fb2-b669-9c4fab08559f",
+  "VersionGuid": "6b8e5f37-6b8b-43d7-a7b1-4bc370eacc02",
+  "InstanceGuid": "",
+  "SupportedProtocols": [
+    "soap1"
+  ],
+  "HeaderAuthentication": "None",
+  "Microflows": [
+    {
+      "Name": "SendInvite",
+      "Documentation": "",
+      "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABx0lEQVQ4T42TS0sCYRSGVaRFv6GgVYuWFRJB7dr2A6KwogsY0ZUIrOxCFkWLQCGpTZuoNkVFm4KuFNQiaNU+0BwVZ3RGZ0br7TsfzlReyAMPynznffzOGbTkqorRwHD8Qw3DxiioBlVVxUwm85nNZlEMdg6fz7fJeotKHBSWZRmKophIkoR4PI5wOMwloVAIfr+/QGJlOKghnU5D0zT+SSSTSYiiCEEQuCCVSoF+JBAIGBJepoDCBiSgQCKRQCQS+TMOQZlc9kfAxjAb6DvNbYwSjUb5TYLBYGlBPr8ldBPaRywWK19AGBIah3ZCIiklommofqIsAaHrOt8LSSKigI0bL0bO+tHua+srS0C3MJa7drWElSc3F7Stt+6VFFDo8f0eR28HkNMyBEmA98KDhYcpjJ4PoMXtuK7rqrWXFLx+vGDubgKLLLD7tIPVy3ksP7sxfNqLnq1OWO3Wply2uEDTNXivPZi9Hcfs3Thm7sfgOunB4tEcP6NMvuArX6LqKoYPBzB56cLgsRNOfwcPs7PPnMCsRrYghQ5+C4iEIqF7uwPT+5P8bVAP602yDP17zapmNDLIWoC90t5sq7DRzMYzCrOMxfINPZp0g0drgP0AAAAASUVORK5CYII=",
+      "Description": "",
+      "Parameters": [
+        {
+          "Name": "EnvironmentUUID",
+          "Type": "String",
+          "TypeSpecification": ""
+        },
+        {
+          "Name": "EnvironmentPassword",
+          "Type": "String",
+          "TypeSpecification": ""
+        },
+        {
+          "Name": "RoleUUID",
+          "Type": "String",
+          "TypeSpecification": ""
+        },
+        {
+          "Name": "InviteeEmailAddress",
+          "Type": "String",
+          "TypeSpecification": ""
+        },
+        {
+          "Name": "InviterEmailAddress",
+          "Type": "String",
+          "TypeSpecification": ""
+        }
+      ],
+      "ReturnType": "Void",
+      "ReturnTypeSpecification": ""
+    }
+  ],
+  "Caption": "Invite API",
+  "ImageBase64": "",
+  "Description": "Invite users to your app. Let your app go viral!"
+}

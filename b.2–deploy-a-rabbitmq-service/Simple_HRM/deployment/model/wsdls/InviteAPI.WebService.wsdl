@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.example.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="InviteAPI" targetNamespace="http://www.example.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.example.com/">
+      <xsd:element name="SendInvite">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="EnvironmentUUID" type="xsd:string" />
+            <xsd:element name="EnvironmentPassword" type="xsd:string" />
+            <xsd:element name="RoleUUID" type="xsd:string" />
+            <xsd:element name="InviteeEmailAddress" type="xsd:string" />
+            <xsd:element name="InviterEmailAddress" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendInviteResponse">
+        <xsd:complexType>
+          <xsd:sequence />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SendInviteRequest">
+    <wsdl:part name="parameters" element="tns:SendInvite" />
+  </wsdl:message>
+  <wsdl:message name="SendInviteResponse">
+    <wsdl:part name="result" element="tns:SendInviteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InviteAPIPortType">
+    <wsdl:operation name="SendInvite">
+      <wsdl:documentation>
+      </wsdl:documentation>
+      <wsdl:input message="tns:SendInviteRequest" />
+      <wsdl:output message="tns:SendInviteResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InviteAPISoap" type="tns:InviteAPIPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendInvite">
+      <soap:operation soapAction="http://www.example.com/SendInvite" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InviteAPI">
+    <wsdl:port name="InviteAPIPort" binding="tns:InviteAPISoap">
+      <soap:address location="http://localhost:8080/ws/InviteAPI/1/soap1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

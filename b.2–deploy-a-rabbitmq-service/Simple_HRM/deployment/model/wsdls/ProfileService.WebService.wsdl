@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.example.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="ProfileService" targetNamespace="http://www.example.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.example.com/">
+      <xsd:element name="GetUserProfile">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="OpenID" type="xsd:string" />
+            <xsd:element name="EnvironmentUUID" type="xsd:string" />
+            <xsd:element name="EnvironmentPassword" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetUserProfileResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="UserProfile">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="OpenId" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="400" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="DisplayName" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="200" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="EmailAddress" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="200" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="AvatarUrl" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="500" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="AvatarThumbnailUrl" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="500" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="JobTitle" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="200" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Department" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="200" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Location" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="200" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Country" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="200" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Bio" nillable="true" type="xsd:string" />
+                  <xsd:element name="Website" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="400" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Phone" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="20" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="LinkedIn" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="400" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Twitter" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="400" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Skype" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="100" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="CompanyId" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="200" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Company" nillable="true">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="100" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="UserProfile_Company" nillable="true">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="0" name="Company">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="CompanyId" nillable="true">
+                                <xsd:simpleType>
+                                  <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="200" />
+                                  </xsd:restriction>
+                                </xsd:simpleType>
+                              </xsd:element>
+                              <xsd:element name="CompanyName" nillable="true">
+                                <xsd:simpleType>
+                                  <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="100" />
+                                  </xsd:restriction>
+                                </xsd:simpleType>
+                              </xsd:element>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUserProfileRequest">
+    <wsdl:part name="parameters" element="tns:GetUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="GetUserProfileResponse">
+    <wsdl:part name="result" element="tns:GetUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ProfileServicePortType">
+    <wsdl:operation name="GetUserProfile">
+      <wsdl:documentation>
+      </wsdl:documentation>
+      <wsdl:input message="tns:GetUserProfileRequest" />
+      <wsdl:output message="tns:GetUserProfileResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProfileServiceSoap" type="tns:ProfileServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserProfile">
+      <soap:operation soapAction="http://www.example.com/GetUserProfile" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProfileService">
+    <wsdl:port name="ProfileServicePort" binding="tns:ProfileServiceSoap">
+      <soap:address location="http://localhost:8080/ws/ProfileService/3/soap1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

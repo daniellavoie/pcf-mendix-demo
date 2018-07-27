@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="AppCloudNavigation.AppCloudNavigation" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+	<name>Mendix AppCloud Navigation</name>
+	<description></description>
+
+	<icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAATlJREFUeNrUk7+Kg0AQxj83GpCkSSchnE9gp/gSuQe4EEiR5h7gsArW9xbWwVYxzyEoFlYHOYjBKmAhl+ztLCiXlLG6gXG++fMbllUVzjmGGMNAG7xAnU6nb9fr9eUZeDQafammac6jKPp8bM5mMwRBANu2YVlWrxeLRT+zXC4/mCj8qKoK8rquEYahjJfLBdvtFmmaoiiKXp9OJ3TzxLLJZHLTNA1VVUGcBE3TyEg56c1mgyzLUJZlr8/nM4ghlhbw8XiM/X4vgc4pp3rbtlitVsjz/E5Tj1im6/qNkvV6LUHf92WknOrikhHHMVzXvdPUI1YVD07HYYxJkDRFykUPSZLAcRx5eZ02DENeIrHwPO9dvEb+6GSHw4Efj8c7/XeGWGW3270qijJ/5jsQe7+V//8vDF7wK8AAyt3H2nMrY70AAAAASUVORK5CYII=</icon>
+
+	<properties>
+		<property key="mendixserver" type="string" defaultValue="https://home.mendix.com/" required="true">
+			<caption>Mendix server location</caption>
+			<category>Configuration</category>
+			<description>The location of the Mendix server.</description>
+		</property>
+	</properties>
+</widget>

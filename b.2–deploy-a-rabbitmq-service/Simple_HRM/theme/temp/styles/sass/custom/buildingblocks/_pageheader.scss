@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Page Header
+========================================================================== */
+.pageheader {
+	border-bottom: 1px solid $color-text-white-hint;
+}
+.pageheader.pageheader-fullwidth {
+	background-color: transparent;
+	border-bottom: 1px solid $color-text-white-hint;
+}
+.pageheader-title {
+	/* Styles here */
+}
+.pageheader-subtitle {
+	color: $color-text-white-secondary;
+}
