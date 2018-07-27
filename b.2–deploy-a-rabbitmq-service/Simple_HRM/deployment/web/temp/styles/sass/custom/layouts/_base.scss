@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Regions
+
+   Used for navigation layouts
+========================================================================== */
+.region-topbar {
+  	border-bottom: 1px solid $color-text-white-hint;
+
+	> .mx-layoutcontainer-wrapper {
+		.mx-navbar {
+			background-color: transparent;
+			ul.nav {
+				li {
+					a {
+						/* Styles here */
+					}
+				}
+			}
+		}
+	}
+
+	.toggle-btn {
+		border-color: #FFF;
+		color: #FFF;
+	}
+
+	// SSO widgets
+	.navbar-right {
+		.mx-appswitcher-button-placeholder,
+		.mx-profilemenu-button-placeholder {
+			iframe {
+				/* Styles here */
+			}
+		}
+		.mx-profilemenu-button-placeholder {
+			/* Styles here */
+		}
+		@media (max-width: 768px) {
+				
+		}
+	}
+}
+
+.region-sidebar,
+.region-sidebar-fixed {
+	border-right: 1px solid $color-text-white-hint;
+	> .mx-layoutcontainer-wrapper {
+		/* Styles here */
+	}
+	.mx-navigationtree .navbar-inner ul li a {
+		background: transparent;
+	}
+	&.mx-scrollcontainer-toggleable {
+		background-color: $brand-inverse;
+	}
+}
+.region-content {
+	> .mx-layoutcontainer-wrapper {
+
+	}
+}
+
+
+/* ==========================================================================
+   Navbar Brand
+
+   Used to style your app brand and logo
+========================================================================== */
+.navbar-brand {
+	/* Styles here */
+	img {
+		/* Styles here */
+	}
+	a {
+		/* Styles here */
+
+		&:hover,
+		&:focus {
+			color: $navbar-brand-name;
+		}
+	}
+}

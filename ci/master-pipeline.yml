@@ -1,0 +1,108 @@
+---
+resources:
+- name: src
+  type: git
+  source:
+    branch: master
+    uri: {{github-uri}}
+- name: version
+  type: semver
+  source:
+    branch: version
+    driver: git
+    file: version
+    initial_version: 0.1.0
+    uri: {{github-uri}}
+
+jobs:
+- name: deploy-to-staging
+  serial_groups:
+  - master-deployment
+  plan:
+  - get: src
+    trigger: true
+  - task: push-pull-request
+    file: src/ci/tasks/push/push.yml
+    params:
+      APP_NAME: mendix-demo-app
+      CF_API: {{cf-api}}
+      CF_ORG: {{cf-staging-org}}
+      CF_PASSWORD: {{cf-password}}
+      CF_SPACE: {{cf-staging-space}}
+      CF_USER: {{cf-user}}
+      BUILDPACK: https://github.com/mendix/cf-mendix-buildpack.git#v1.9.2
+      MENDIX_DB_NAME: {{mendix-staging-db-name}}
+      MENDIX_DATABASE_URL : {{mendix-staging-database-url}}
+      MENDIX_ADMIN_PASSWORD: {{mendix-staging-admin-password}}
+      DATABASE_URL : {{mendix-staging-database-url}}
+      APP_HOSTNAME: {{app-staging-hostname}}
+      APP_DOMAIN: {{app-staging-domain}}
+    input_mapping:
+      src: src
+      src-ci: src
+
+- name: run-smoke-tests-staging
+  serial_groups:
+  - master-deployment
+  plan:
+  - get: version
+  - get: src
+    passed:
+    - deploy-to-staging
+    trigger: true
+  - task: run-smoke-tests
+    file: src/ci/tasks/smoke-tests/smoke-tests.yml
+    input_mapping:
+      src: src
+    params:
+      URL: https://((app-staging-hostname)).((app-staging-domain))
+  - put: version
+    params:
+      file: version/version
+
+- name: deploy-to-production
+  serial_groups:
+  - blue-green-deployment
+  plan:
+  - get: src
+    passed:
+    - run-smoke-tests-staging
+  - get: version
+    passed:
+    - run-smoke-tests-staging
+  - task: push-to-production
+    file: src/ci/tasks/push/push.yml
+    params:
+      CF_API: {{cf-api}}
+      CF_USER: {{cf-user}}
+      CF_PASSWORD: {{cf-password}}
+      BUILDPACK: https://github.com/mendix/cf-mendix-buildpack.git#v1.9.2
+      APP_NAME: mendix-demo-app
+      MENDIX_DB_NAME: {{mendix-prod-db-name}}
+      MENDIX_ADMIN_PASSWORD: {{mendix-prod-admin-password}}
+      MENDIX_DATABASE_URL : {{mendix-prod-database-url}}
+      CF_ORG: {{cf-prod-org}}
+      CF_SPACE: {{cf-prod-space}}
+      APP_HOSTNAME: {{app-prod-hostname}}
+      APP_DOMAIN: {{app-prod-domain}}
+    input_mapping:
+      src: src
+      src-ci: src
+
+- name: run-smoke-tests-production
+  serial_groups:
+  - blue-green-deployment
+  plan:
+  - get: src
+    passed:
+    - deploy-to-production
+    trigger: true
+  - get: version
+    passed:
+    - run-smoke-tests-staging
+  - task: run-smoke-tests
+    file: src/ci/tasks/smoke-tests/smoke-tests.yml
+    input_mapping:
+      src: src
+    params:
+      URL: https://((app-prod-hostname)).((app-prod-domain))

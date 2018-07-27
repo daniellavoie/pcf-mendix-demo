@@ -1,0 +1,20 @@
+﻿Running "generate:profile" (generate) task
+C:\Users\Daniel\Documents\Mendix\CF-Push-Demo\deployment\widgets.config.json [ 'MobileFeatures.widget.MobileFeatures' ]
+
+Running "generate:javascript" (generate) task
+C:\Users\Daniel\Documents\Mendix\CF-Push-Demo\deployment\widgets.config.json [ 'MobileFeatures.widget.MobileFeatures' ]
+
+Running "dojo:dist" (dojo) task
+
+Building Dojo...
+Dojo Successfully Built...
+
+Running "copy:main" (copy) task
+Copied 1 file
+
+Running "copy:nls" (copy) task
+
+
+Done, without errors.
+
+

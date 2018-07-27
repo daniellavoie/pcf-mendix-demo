@@ -1,0 +1,44 @@
+﻿{
+  "Name": "ProfileService",
+  "Documentation": "",
+  "Version": 3,
+  "PublishDateTime": "Fri, 06 Mar 2015 10:54:47 GMT",
+  "ServiceGuid": "039d7fc3-9419-48b1-9233-6de183bce628",
+  "VersionGuid": "7830d297-4439-4770-8ab9-e862c248787e",
+  "InstanceGuid": "",
+  "SupportedProtocols": [
+    "soap1"
+  ],
+  "HeaderAuthentication": "None",
+  "Microflows": [
+    {
+      "Name": "GetUserProfile",
+      "Documentation": "",
+      "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAcdJREFUOE+Nk0tLAmEUhlWkRb+hoFWLlhUSQe3a9gOisKILGNGVCKzsQhZFi0AhqU2bqDZFRZuCrhTUImjVPtAcFWd0RmdG6+07H85UXsgDD8p85338zhm05KqK0cBw/EMNw8YoqAZVVcVMJvOZzWZRDHYOn8+3yXqLShwUlmUZiqKYSJKEeDyOcDjMJaFQCH6/v0BiZTioIZ1OQ9M0/kkkk0mIoghBELgglUqBfiQQCBgSXqaAwgYkoEAikUAkEvkzDkGZXPZHwMYwG+g7zW2MEo1G+U2CwWBpQT6/JXQT2kcsFitfQBgSGod2QiIpJaJpqH6iLAGh6zrfC0kiooCNGy9GzvrR7mvrK0tAtzCWu3a1hJUnNxe0rbfulRRQ6PH9HkdvB5DTMgRJgPfCg4WHKYyeD6DF7biu66q1lxS8frxg7m4Ciyyw+7SD1ct5LD+7MXzai56tTljt1qZctrhA0zV4rz2YvR3H7N04Zu7H4DrpweLRHD+jTL7gK1+i6iqGDwcweenC4LETTn8HD7Ozz5zArEa2IIUOfguIhCKhe7sD0/uT/G1QD+tNsgz9e82qZjQyyFqAvdLebKuw0czGMwqzjMXyDT2adINHa4D9AAAAAElFTkSuQmCC",
+      "Description": "",
+      "Parameters": [
+        {
+          "Name": "OpenID",
+          "Type": "String",
+          "TypeSpecification": ""
+        },
+        {
+          "Name": "EnvironmentUUID",
+          "Type": "String",
+          "TypeSpecification": ""
+        },
+        {
+          "Name": "EnvironmentPassword",
+          "Type": "String",
+          "TypeSpecification": ""
+        }
+      ],
+      "ReturnType": "Object",
+      "ReturnTypeSpecification": "UserProfile",
+      "ReturnTypeCanBeEmpty": true
+    }
+  ],
+  "Caption": "Profile service",
+  "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAppJREFUOE9tzmtIk1EYB/DzKmKttEYYaiIWLtEMLBHbVq5mLZk6QpgOjJRZTCLopobzknOYWZFMvExFywvqhySnUl4gsHSVSyM1sA8RZUYGYUmOtOjfOa9D3PSB3+G8z/k/Dy9h5cVxxN+ZYBfHaalGBy3rrc2wGb7WNtfQycPDx3N1OvtVrdYuFYnGWc8lwyO+9NhAj0ahWNIlJyNNpUKCRLLEei4ZHknZyznRhHBkJyFTo21FsL+q5bE767E31zwxJ7g5qU10MwR5e88vTzVh0WbmsTvrsTfXPKmhhwujPsZzmA3+HDbx2J312JtLlpDKeLd1KpRujZ97r9u/Dd4Ew+6st1F2tUQ7OHIhmiPlcTyFJStqaqanCFOdpcjMN84G3R63+VV/GPGp+Ni3pWT2HFH9FgJwTK8vv5JYztqqV+NiXgHU5rYF/ahtvnhs7Ifh7bPvp7qt1k0501py+pfQkXeqBKpXr9r9pcxkQmrVA2T2D8A8/QTN08/R8vUhciabcLi5Y8Qz/XHmyshKHaTqKFtSUhJSVceg0FcgsaEBKZ0WaNqHcNYygIyXdygjTpjrF7Ym3xviJ2mlCASCyeDg4DmlUgm2QCaTYZ+uFOKacuyv6oO//jX23u1CUPslhLVkIyS70u6VeGvCMU9eiMXiv1KpFHK5nF9Av3E87z6iyloRVm5FoOEdAoxP4VNdgsAuNQJMmj+b1QX8HwioT2xAIpGsLoiMjERhQz+iCh8h9MYEYusXEFc3j+jaQfibr8DzsnLZPd6QyxYcoKqof9QiNUe9pyZFEfKsbUevdfpmdCxJTTM4WUMXlL2BMN0IEhFjJcIYBc0RD2oPFbIxdxl3SGfYntZs8Tvf3Sc8097lHpFfTEjoEUKIx3+C+lfeRqSSqwAAAABJRU5ErkJggg==",
+  "Description": ""
+}

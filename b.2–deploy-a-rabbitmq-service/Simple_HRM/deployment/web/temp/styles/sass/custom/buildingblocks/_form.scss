@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Form
+
+   To extend the default form
+========================================================================== */
+.form {
+	/* Styles here */
+}
+.form-group .control-label {
+	color: $color-text-white;
+}
+.form-control-static {
+	/* Styles here */
+}
+.form-footer {
+	border-color: rgba(255, 255, 255, 0.15);
+}

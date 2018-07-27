@@ -1,0 +1,10 @@
+﻿Buildfile: C:\Users\Daniel\projects\platform-architect\git\Simple_HRM\deployment\build_core.xml
+
+deploy:
+     [copy] Copying 44 files to C:\Users\Daniel\projects\platform-architect\git\Simple_HRM\deployment
+     [copy] Copying 19 files to C:\Users\Daniel\projects\platform-architect\git\Simple_HRM\deployment\model\lib\userlib
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

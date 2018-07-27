@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Dashboard Stats
+
+   Used in dashboard
+========================================================================== */
+.dashboardstat {
+	/* Styles here */
+	@media (max-width: $screen-md) {
+		
+	}
+	
+	.dashboardstat-left,
+	.dashboardstat-right {
+		/* Styles here */
+	}
+}
+.dashboardstat-icon {
+	padding: 20px 14px;
+
+	@media (max-width: $screen-md) {
+		
+	}
+}
+.dashboardstat-title {
+	font-size: 15px;
+	padding-top: 5px;
+	color: $color-text-white;
+
+	label {
+		font-weight: 300;
+	}
+
+	@media (max-width: $screen-md) {
+		
+	}
+}
+.dashboardstat-number {
+	font-size: 65px;
+	color: $color-text-white;
+
+	label {
+		font-weight: 300;
+	}
+	@media (max-width: $screen-md) {
+		
+	}
+}

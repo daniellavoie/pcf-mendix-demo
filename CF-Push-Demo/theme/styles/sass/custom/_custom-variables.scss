@@ -1,0 +1,65 @@
+//== Gray Shades
+//## Different gray shades to be used for our variables and components
+$gray-darker:                                       #222222;
+$gray-dark:                                         #333333;
+$gray:                                              #555555;
+$gray-light:                                        #888888;
+$gray-primary:                                      #D7D7D7;
+$gray-lighter:                                      #EEEEEE;
+
+//== Step 1: Brand Colors
+$brand-default: 									#51537e;
+$brand-primary: 									#53cae3;
+$brand-inverse: 									#252c36;
+$brand-info: 										#48b0f7;
+$brand-success: 									#53cae3;
+$brand-warning: 									#f99b1d;
+$brand-danger: 										#ed1c24;
+
+// Used for other variables
+$default-border-color:                              $gray-primary;
+
+//== Step 3: Typography
+$font-family-import:                                "https://fonts.googleapis.com/css?family=Lato";
+$font-family-base:                                  'Lato', sans-serif;
+$font-base-size:                                    14px;
+$font-base-color:                                   #555;
+$link-color:                                        $brand-primary;
+$font-size-h1:                                      31px;
+$font-size-h2:                                      26px;
+$font-size-h3:                                      24px;
+$font-size-h4:                                      18px;
+$font-color-headers:                                #17347b;
+
+//== Step 2: UI Customization
+
+// Topbar
+$topbar-bg:                                         #3d4069;
+$navtopbar-border-color:                            transparent;
+$topbar-border-color:                               $navtopbar-border-color;
+$topbar-minimalheight:                              60px;
+$navtopbar-color:                                   #FFF;
+$navbar-brand-name:                                 $default-border-color;
+$brand-logo:                                        false;
+$brand-logo-height:                                 30px;
+$brand-logo-width:                                  30px;
+
+// Sidebar
+$sidebar-bg:                                        #252c36;
+$navsidebar-color:                                  #FFFFFF;
+$navsidebar-color-hover:                            $navsidebar-color;
+
+// Backgrounds
+$bg-color:                                          #FFFFFF;
+$bg-color-secondary:                                #fafafa;
+
+// == Old variables used in theme customizer to the new lib variables
+$font-size-default:                                 $font-base-size;
+$font-color-default:                                $font-base-color;
+$border-color-default:                              $default-border-color;
+$font-color-header:				                    $font-color-headers;
+
+// Custom
+$btn-default-bg:                        			$brand-default;
+$btn-default-color:                     			#FFF;
+$btn-default-bg-hover:                  			mix($btn-default-bg, white, 80%);

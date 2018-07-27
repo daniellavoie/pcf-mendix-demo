@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Master Detail Listview
+========================================================================== */
+.masterdetail-listview {
+	background-color: rgba(0, 0, 0, 0.2);
+	.mx-listview {
+		/* Styles here */
+		.mx-listview-content {
+			/* Styles here */
+		}
+	
+		.mx-listview-item {
+
+			&.selected {
+				
+				
+				&:hover,
+				&:active {
+					
+				}
+			}
+		}
+	}
+}

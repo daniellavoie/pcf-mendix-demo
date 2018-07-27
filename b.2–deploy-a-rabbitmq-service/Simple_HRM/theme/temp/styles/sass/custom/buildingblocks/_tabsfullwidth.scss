@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Tabs full width
+========================================================================== */
+.tabsfullwidth {
+	background-color: transparent;
+	> .mx-tabcontainer-tabs {
+		/* Styles here */
+		@media (min-width: $screen-sm) {
+			
+		}
+	}
+	> .mx-tabcontainer-content {
+		background: rgba(0,0,0,0.1);
+		border-bottom: 1px solid $color-text-white-hint;
+	}
+}
+

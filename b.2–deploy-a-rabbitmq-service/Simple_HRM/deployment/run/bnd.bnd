@@ -1,0 +1,6 @@
+Private-Package: system, administration.proxies, administration.proxies.microflows, appcloudservices, appcloudservices.actions, appcloudservices.proxies.constants, appcloudservices.proxies.microflows, inviteapi.proxies.microflows, myfirstmodule.proxies, myfirstmodule.proxies.microflows, permissionsapi.proxies, permissionsapi.proxies.microflows, profileservice.proxies, profileservice.proxies.microflows, rabbitmqcloudfoundry.actions, system, system.actions, system.proxies, system.proxies.microflows
+Import-Package: *;resolution:=optional
+Service-Component: *
+Include-Resource: ../../userlib/;recursive:=true;filter:=!*.jar
+Bundle-Name: Simple_HRM
+Bundle-SymbolicName: project

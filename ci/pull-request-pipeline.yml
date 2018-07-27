@@ -1,0 +1,72 @@
+---
+resource_types:
+- name: pull-request
+  type: docker-image
+  source:
+    repository: jtarchie/pr
+
+resources:
+- name: src-pr
+  type: pull-request
+  source:
+    repo: daniellavoie/pcf-mendix-demo
+    access_token: {{github-access-token}}
+    uri: https://github.com/daniellavoie/pcf-mendix-demo
+
+jobs:
+- name: push-to-cf
+  serial_groups: [pull-request-deployment]
+  plan:
+  - get: src-pr
+    trigger: true
+  - put: src-pr
+    params:
+      path: src-pr
+      status: pending
+  - task: push-pull-request
+    file: src-pr/ci/tasks/push/push.yml
+    input_mapping:
+      src: src-pr
+      src-ci: src-pr
+    params:
+      APP_NAME: mendix-demo-app
+      MENDIX_DB_NAME: {{mendix-pr-db-name}}
+      MENDIX_ADMIN_PASSWORD: {{mendix-pr-password}}
+      MENDIX_DATABASE_URL : {{mendix-pr-database-url}}
+      CF_API: {{cf-api}}
+      CF_USER: {{cf-user}}
+      CF_PASSWORD: {{cf-password}}
+      CF_ORG: {{cf-pr-org}}
+      CF_SPACE: {{cf-pr-space}}
+      BUILDPACK: https://github.com/mendix/cf-mendix-buildpack.git#v1.9.2
+      ENVIRONMENT: pull-request
+      APP_HOSTNAME: {{app-pr-hostname}}
+      APP_DOMAIN: {{app-pr-domain}}
+      on_failure:
+        put: src-pr
+        params:
+          path: src-pr
+          status: failure
+
+- name: run-smoke-tests
+  serial_groups: [pull-request-deployment]
+  plan:
+  - get: src-pr
+    passed: [push-to-cf]
+    trigger: true
+  - task: run-smoke-tests
+    file: src-pr/ci/tasks/smoke-tests/smoke-tests.yml
+    input_mapping:
+      src: src-pr
+    params:
+      URL: https://((app-pr-hostname)).apps.((app-pr-domain))
+    on_failure:
+      put: src-pr
+      params:
+        path: src-pr
+        status: failure
+    on_success:
+      put: src-pr
+      params:
+        path: src-pr
+        status: success

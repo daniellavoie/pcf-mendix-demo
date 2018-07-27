@@ -1,0 +1,1 @@
+﻿define(["AppCloudNavigation/AppCloudNavigation", "AppSwitcher/AppSwitcher", "ProfileMenu/ProfileMenu", "SprintrFeedbackWidget/SprintrFeedback"], {});

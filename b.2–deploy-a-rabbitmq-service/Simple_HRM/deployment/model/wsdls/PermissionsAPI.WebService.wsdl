@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.example.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="PermissionsAPI" targetNamespace="http://www.example.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.example.com/">
+      <xsd:element name="GetRolesForOpenID">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="OpenID" type="xsd:string" />
+            <xsd:element name="EnvironmentID" type="xsd:string" />
+            <xsd:element name="EnvironmentPassword" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRolesForOpenIDResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="AppRole">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="UUID">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="200" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="DisplayName">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="200" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetRolesForOpenIDRequest">
+    <wsdl:part name="parameters" element="tns:GetRolesForOpenID" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesForOpenIDResponse">
+    <wsdl:part name="result" element="tns:GetRolesForOpenIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PermissionsAPIPortType">
+    <wsdl:operation name="GetRolesForOpenID">
+      <wsdl:documentation>
+      </wsdl:documentation>
+      <wsdl:input message="tns:GetRolesForOpenIDRequest" />
+      <wsdl:output message="tns:GetRolesForOpenIDResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PermissionsAPISoap" type="tns:PermissionsAPIPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRolesForOpenID">
+      <soap:operation soapAction="http://www.example.com/GetRolesForOpenID" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PermissionsAPI">
+    <wsdl:port name="PermissionsAPIPort" binding="tns:PermissionsAPISoap">
+      <soap:address location="http://localhost:8080/ws/PermissionsAPI/1/soap1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

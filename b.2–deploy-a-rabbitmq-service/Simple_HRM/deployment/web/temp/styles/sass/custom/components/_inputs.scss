@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Inputs
+========================================================================== */
+.form-control {
+	&[readonly] {
+		color: #000;
+		background-color: $brand-primary;
+	}
+	option {
+		color: #000;
+		background-color: $brand-primary;
+	}
+}
+textarea.form-control {
+	/* Styles here */
+}
+.form-control:focus {
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(255, 255, 255, 0.6);
+}
+// Not editable textarea, textarea will be rendered as a label
+.mx-textarea label {
+	/* Styles here */
+}
+// Input and textarea get properly aligned
+.form-group div[class*='textBox'] > label,
+.form-group div[class*='textArea'] > label {
+
+}
+// Inputs Readonly
+.disabled-input {
+	label {
+		
+	}
+}
+// Inputs Readonly
+.readonly-input {
+	label { 
+		
+	}
+}
+.readonly-input-alert label {
+	
+}
+

@@ -1,0 +1,9 @@
+---
+applications:
+- name: mendix-demo-app
+  instances: 1
+  buildpack: https://github.com/mendix/cf-mendix-buildpack
+  services:
+  - mendix-demo-db
+  env:
+    ADMIN_PASSWORD: Pivotal2018@PCF

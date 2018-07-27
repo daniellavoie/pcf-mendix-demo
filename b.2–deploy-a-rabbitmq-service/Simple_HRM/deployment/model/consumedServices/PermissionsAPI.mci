@@ -1,0 +1,43 @@
+﻿{
+  "Name": "PermissionsAPI",
+  "Documentation": "",
+  "Version": 1,
+  "PublishDateTime": "Mon, 27 Jan 2014 10:54:14 GMT",
+  "ServiceGuid": "fc2d860c-9e68-4bbb-89e4-6f69e5764287",
+  "VersionGuid": "1b1ca6f0-518e-4e9f-a023-5e147c64443d",
+  "InstanceGuid": "",
+  "SupportedProtocols": [
+    "soap1"
+  ],
+  "HeaderAuthentication": "None",
+  "Microflows": [
+    {
+      "Name": "GetRolesForOpenID",
+      "Documentation": "",
+      "ImageBase64": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABx0lEQVQ4T42TS0sCYRSGVaRFv6GgVYuWFRJB7dr2A6KwogsY0ZUIrOxCFkWLQCGpTZuoNkVFm4KuFNQiaNU+0BwVZ3RGZ0br7TsfzlReyAMPynznffzOGbTkqorRwHD8Qw3DxiioBlVVxUwm85nNZlEMdg6fz7fJeotKHBSWZRmKophIkoR4PI5wOMwloVAIfr+/QGJlOKghnU5D0zT+SSSTSYiiCEEQuCCVSoF+JBAIGBJepoDCBiSgQCKRQCQS+TMOQZlc9kfAxjAb6DvNbYwSjUb5TYLBYGlBPr8ldBPaRywWK19AGBIah3ZCIiklommofqIsAaHrOt8LSSKigI0bL0bO+tHua+srS0C3MJa7drWElSc3F7Stt+6VFFDo8f0eR28HkNMyBEmA98KDhYcpjJ4PoMXtuK7rqrWXFLx+vGDubgKLLLD7tIPVy3ksP7sxfNqLnq1OWO3Wply2uEDTNXivPZi9Hcfs3Thm7sfgOunB4tEcP6NMvuArX6LqKoYPBzB56cLgsRNOfwcPs7PPnMCsRrYghQ5+C4iEIqF7uwPT+5P8bVAP602yDP17zapmNDLIWoC90t5sq7DRzMYzCrOMxfINPZp0g0drgP0AAAAASUVORK5CYII=",
+      "Description": "",
+      "Parameters": [
+        {
+          "Name": "OpenID",
+          "Type": "String",
+          "TypeSpecification": ""
+        },
+        {
+          "Name": "EnvironmentID",
+          "Type": "String",
+          "TypeSpecification": ""
+        },
+        {
+          "Name": "EnvironmentPassword",
+          "Type": "String",
+          "TypeSpecification": ""
+        }
+      ],
+      "ReturnType": "List",
+      "ReturnTypeSpecification": "AppRole"
+    }
+  ],
+  "Caption": "Permissions API",
+  "ImageBase64": "",
+  "Description": ""
+}

@@ -1,0 +1,8 @@
+﻿Buildfile: C:\Users\Daniel\projects\platform-architect\git\Simple_HRM\deployment\build_core.xml
+
+clean:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+
