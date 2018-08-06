@@ -6,7 +6,6 @@ SRC=src
 
 cleanOldApplications() {
   cf delete -f $APP_NAME
-  cf delete-service -f $DB_NAME
 }
 
 loginAndTargetSpace(){
@@ -20,9 +19,8 @@ loginAndTargetSpace(){
 }
 
 pushApplication() {
-  cf push --no-start -p $SRC/CF-Push-Demo/ -f $SRC/CF-Push-Demo/manifest-$ENVIRONMENT.yml $APP_NAME -n $APP_HOSTNAME -d $APP_DOMAIN
+  cf push --no-start -p $SRC/CF-Push-Demo/ $APP_NAME -n $APP_HOSTNAME -d $APP_DOMAIN -b mendix_buildpack
 
-  cf create-service $DB_SERVICE_NAME $DB_SERVICE_PLAN $DB_NAME
   cf bind-service $APP_NAME $DB_NAME
   cf start $APP_NAME
   # TODO - return error
