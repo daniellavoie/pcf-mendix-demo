@@ -1,7 +1,7 @@
-﻿Buildfile: C:\Users\dlavo\projects\bdc\git\bdc-experiment\CF-Push-Demo\deployment\build_core.xml
+﻿Buildfile: C:\Users\dlavo\projects\innovapost\git\pcf-mendix-demo\CF-Push-Demo\deployment\build_core.xml
 
 compile:
-    [javac] Compiling 5 source files to C:\Users\dlavo\projects\bdc\git\bdc-experiment\CF-Push-Demo\deployment\run\bin
+    [javac] Compiling 1 source file to C:\Users\dlavo\projects\innovapost\git\pcf-mendix-demo\CF-Push-Demo\deployment\run\bin
 
 build:
       [bnd] # addAll 'deployment/run/bnd.bnd' with ,

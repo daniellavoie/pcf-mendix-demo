@@ -1,9 +1,9 @@
-﻿Buildfile: C:\Users\dlavo\projects\bdc\git\bdc-experiment\CF-Push-Demo\deployment\build_core.xml
+﻿Buildfile: C:\Users\dlavo\projects\innovapost\git\pcf-mendix-demo\CF-Push-Demo\deployment\build_core.xml
 
 deploy:
-     [copy] Copying 44 files to C:\Users\dlavo\projects\bdc\git\bdc-experiment\CF-Push-Demo\deployment
-     [copy] Copying 49 files to C:\Users\dlavo\projects\bdc\git\bdc-experiment\CF-Push-Demo\deployment\model\lib\userlib
-     [copy] Copying 8 files to C:\Users\dlavo\projects\bdc\git\bdc-experiment\CF-Push-Demo\deployment\model\resources
+     [copy] Copying 44 files to C:\Users\dlavo\projects\innovapost\git\pcf-mendix-demo\CF-Push-Demo\deployment
+     [copy] Copying 49 files to C:\Users\dlavo\projects\innovapost\git\pcf-mendix-demo\CF-Push-Demo\deployment\model\lib\userlib
+     [copy] Copying 8 files to C:\Users\dlavo\projects\innovapost\git\pcf-mendix-demo\CF-Push-Demo\deployment\model\resources
 
 BUILD SUCCESSFUL
 Total time: 1 second

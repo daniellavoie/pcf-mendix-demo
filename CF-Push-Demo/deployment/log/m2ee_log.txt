@@ -1,0 +1,5 @@
+[rtlauncher:container$] INFO Evictions for component 'project-userlib':
+Evicted C:\Users\dlavo\projects\innovapost\git\pcf-mendix-demo\CF-Push-Demo\deployment\model\lib\userlib\openid4java-0.9.8.jar by C:\Users\dlavo\projects\innovapost\git\pcf-mendix-demo\CF-Push-Demo\deployment\model\lib\userlib\openid4java-1.0.0.jar.
+[rtlauncher:container$] INFO Container start took 14516. Ready to accept admin requests.
+
+
