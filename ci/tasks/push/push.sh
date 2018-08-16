@@ -19,7 +19,7 @@ loginAndTargetSpace(){
 }
 
 pushApplication() {
-  cf push --no-start -p $SRC/CF-Push-Demo/ $APP_NAME -n $APP_HOSTNAME -d $APP_DOMAIN -b mendix_buildpack
+  cf push --no-start -p $SRC/CF-Push-Demo/ $APP_NAME -n $APP_HOSTNAME -d $APP_DOMAIN -b $BUILDPACK
 
   cf bind-service $APP_NAME $DB_NAME
   cf start $APP_NAME

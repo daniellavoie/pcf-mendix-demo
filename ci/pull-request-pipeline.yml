@@ -34,11 +34,12 @@ jobs:
       CF_API: {{cf-api}}
       CF_USER: {{cf-user}}
       CF_PASSWORD: {{cf-password}}
-      CF_ORG: {{cf-org}}
-      CF_SPACE: {{cf-space}}
+      CF_ORG: {{cf-pr-org}}
+      CF_SPACE: {{cf-pr-space}}
+      BUILDPACK: https://github.com/mendix/cf-mendix-buildpack.git#v1.9.2
       ENVIRONMENT: pull-request
-      APP_HOSTNAME: {{app-hostname}}
-      APP_DOMAIN: {{app-domain}}
+      APP_HOSTNAME: {{app-pr-hostname}}
+      APP_DOMAIN: {{app-pr-domain}}
       on_failure:
         put: src-pr
         params:
@@ -56,7 +57,7 @@ jobs:
     input_mapping:
       src: src-pr
     params:
-      URL: {{app-url}}
+      URL: https://((app-pr-hostname)).apps.((app-pr-domain))
     on_failure:
       put: src-pr
       params:
