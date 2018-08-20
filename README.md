@@ -10,6 +10,15 @@ The project serves an example of a continuous delivery pipeline. With this setup
 * Automatic deploy to staging environment after merge.
 * Promotion from staging environment to production.
 
+## Pipeline workflow
+
+* Submit a new pull request on the project repository
+* Pull request pipeline will run and validate that the commits in the pull request are good
+* Accept the pull request
+* Deploy to staging pipeline will be triggered and deploy the commits to staging env
+* Click the button to deploy to production 
+
+
 ## Pushing Mendix to Pivotal Cloud Foundry
 
 The [Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack) will build a container from sources. As a result, a pipeline only need to fetch the sources from a SCM and execute a `cf push` command to the desired space.
