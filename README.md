@@ -10,6 +10,14 @@ The project serves an example of a continuous delivery pipeline. With this setup
 * Automatic deploy to staging environment after merge.
 * Promotion from staging environment to production.
 
+## Pushing Mendix to Pivotal Cloud Foundry
+
+The [Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack) will build a container from sources. As a result, a pipeline only need to fetch the sources from a SCM and execute a `cf push` command to the desired space.
+
+## Testing
+
+This pipeline features `smoke-test` job will execute a curl command to the `/rest/healthservice/v1/health` endpoint. This endpoint has to be implemented in the deployed app and must return a `200` HTTP status to be considered a success.
+
 ## Pipeline configurations
 
 Example values are provided in the next section.
