@@ -1,25 +1,15 @@
 # Concourse Pipeline for deploying a Mendix application to Pivotal Cloud Foundry
 
-## Start Concourse from binary
-
-```
-concourse quickstart \
-  --basic-auth-username myuser \
-  --basic-auth-password mypass \
-  --external-url http://localhost:8080 \
-  --worker-work-dir /opt/concourse/worker
-```
-
+The project serves an example of a continuous delivery pipeline. With this setup, a package is always ready to be deployed or redepoyed to production.
 ## Pipelines
 
-The project serves an example of a continuous delivery pipeline. With this setup, a package is always ready to be deployed or redepoyed to production.
-
+* Pull Request Pipeline
+* Production deployment pipeline 
 ## Features
 
 * Pull Request status verification
 * Automatic deploy to staging environment after merge
 * Promotion from staging environment to production
-* Blue Green deployment
 
 ## Preparing your credential file
 

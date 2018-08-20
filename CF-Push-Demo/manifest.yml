@@ -6,3 +6,4 @@ applications:
   - mendix-demo-db
   env:
     ADMIN_PASSWORD: Pivotal2018@PCF
+    DATABASE_URL: jdbc:postgresql://posgresql-server.postgres.database.azure.com:5432/posgresql-server?user=postgresqladmin&password=2018.QAZxsw2&ssl=true
