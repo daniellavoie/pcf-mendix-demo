@@ -18,6 +18,9 @@ The project serves an example of a continuous delivery pipeline. With this setup
 * Deploy to staging pipeline will be triggered and deploy the commits to staging env
 * Click the button to deploy to production 
 
+## Prerequisites
+
+* You need to prepare the org, spaces and the database for the `pr`, `staging` and `prod` environment. Those references will have to be configured in your concourse pipeline properties. Database can be configured with `mendix-*-db-name` or `mendix-*-database-url`.
 
 ## Pushing Mendix to Pivotal Cloud Foundry
 
